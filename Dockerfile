@@ -7,6 +7,8 @@ WORKDIR /app
 # Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
+RUN pip install --no-cache-dir fastapi uvicorn
+
 
 # Copy app and model
 COPY app ./app
